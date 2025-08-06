@@ -2,7 +2,7 @@ from openai import OpenAI
 import markdown  # 用于转换Markdown格式（如 * 加粗）
 from markupsafe import Markup  # Flask 内置的安全 HTML 处理库
 
-client = OpenAI(api_key="sk-03ce3fd1d3624ec2a6bed1da73e6009c", base_url="https://api.deepseek.com")
+client = OpenAI(api_key="your api key", base_url="https://api.deepseek.com")
 
 # 将带 * 的文本转换为HTML
 def format_response(text):
@@ -80,4 +80,5 @@ def callDeepSeek(clinicalFeatures1,riskGroup1):
 # Risk Very Low
 # """
 # print(Markup(callDeepSeek(a,b).replace("<ul>",'<ul class="list-disc pl-5 space-y-1 text-gray-700">')))
+
 
